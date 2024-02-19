@@ -5,19 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabF10"
         mc:Ignorable="d"
-        Title="Registr" Height="450" Width="800">
+        Title="Registr" Height="1080" Width="1920" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"></ColumnDefinition>
             <ColumnDefinition Width="0.6*"></ColumnDefinition>
             <ColumnDefinition Width="0.2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="0.15*"></RowDefinition>
-            <RowDefinition Height="0.6*"></RowDefinition>
-            <RowDefinition Height="0.25*"></RowDefinition>
+            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition Height="0.15*"></RowDefinition>
         </Grid.RowDefinitions>
-        
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="0" Grid.Column="1">
+            <Run FontWeight="Bold" FontSize="30" Foreground="DarkRed">Регистрация</Run>
+            <Run FontSize="30">сотрудников </Run><LineBreak/>
+            <Run FontSize="30">компании</Run>
+        </TextBlock>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock FontSize="30"><Run Text="Login:"/></TextBlock>
+            <TextBox Name="LoginBox"  FontSize="30"/>
+            <TextBlock FontSize="30"><Run Text="Password:"/></TextBlock>
+            <PasswordBox FontSize="30" PasswordChar="*" />
+            <TextBlock FontSize="30"><Run Text="Repeat Password:"/></TextBlock>
+            <PasswordBox  FontSize="30" PasswordChar="#"/>
+            <TextBlock FontSize="30"><Run Text="Position:"/></TextBlock>
+            <ComboBox FontSize="30">
+                <ComboBoxItem IsSelected="True">администратор</ComboBoxItem>
+                <ComboBoxItem>уборщик</ComboBoxItem>
+                <ComboBoxItem>сантехник</ComboBoxItem>
+                <ComboBoxItem>водитель</ComboBoxItem>
+                <ComboBoxItem>менеджер</ComboBoxItem>
+            </ComboBox>
+            <TextBlock FontSize="30"><Run Text="Commentary:"/></TextBlock>
+            <TextBox TextWrapping="Wrap" FontSize="30" IsReadOnly="True" MaxLines="3" VerticalScrollBarVisibility="Visible" Text="Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудникаЭто очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.Это очень информативный комментарий про сотрудника.."/>
+        </StackPanel>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Name="send_button"  FontSize="30" FontFamily="Arial Black" Grid.Row="0" Grid.Column="0" Content="Register" Background="#FF5AA56C" Foreground="#3D4653"  Margin="110,40,110,40" />
+            <Button Name="drop_button" FontSize="30" FontFamily="Arial Black" Grid.Row="0" Grid.Column="1" Content="Cancel" Background="#FFC85B5B" Foreground="#3D4653" Margin="110,40,110,40" />
+        </Grid>
+        <ScrollViewer Margin="0 0 20 0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"  Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+            <TextBlock  HorizontalAlignment="Stretch" >            
+                <Run FontSize="24"> Отзывы на техподдержку</Run><LineBreak/>
+                <StackPanel HorizontalAlignment="Stretch" Margin="10 0 0 0">
+                    <TextBlock TextWrapping="Wrap">
+                        <Run  FontSize="22">Дёмин Александр Ильич</Run><LineBreak/>
+                        <Run FontSize="14">До него смогли дозвониться</Run>
+                    </TextBlock>
+            
+                    <TextBlock TextWrapping="Wrap">
+                        <Run FontSize="22">Павлов Анатолий Кринделёвич</Run><LineBreak/>
+                        <Run FontSize="14">Смог дозвониться до техподдержки за 7 минут</Run>
+                    </TextBlock>
+            
+                    <TextBlock TextWrapping="Wrap">
+                        <Run FontSize="22">Харитонов Шамиль Ереванович</Run><LineBreak/>
+                        <Run FontSize="14">Не дозвонился, но решил все сам!</Run>
+                    </TextBlock>
+                </StackPanel>            
+            </TextBlock>
+        </ScrollViewer>
+        <ScrollViewer Margin="20 0 0 0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"  Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+            <TextBlock HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+                <Run FontSize="24">Техподдержка</Run> <LineBreak/>
+                <StackPanel Margin="10 0 0 0">
+                    <TextBlock>
+                        <Run FontSize="22">Дёмин Александр Ильич</Run><LineBreak/>
+                        <Run FontSize="14">+ 7 (902) 865-98-66</Run>
+                    </TextBlock>
+            
+                    <TextBlock>
+                        <Run FontSize="22">Жар Агон Адович</Run><LineBreak/>
+                        <Run FontSize="14">+ 7 (956) 785-87-21</Run>
+                    </TextBlock>
+            
+                    <TextBlock>
+                        <Run FontSize="22">Запальнов Норман Никитич</Run><LineBreak/>
+                        <Run FontSize="14">+ 7 (960) 464-78-30</Run>
+                    </TextBlock>
+                </StackPanel>
+            </TextBlock>
+        </ScrollViewer>
     </Grid>
 </Window>

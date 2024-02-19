@@ -23,6 +23,7 @@ namespace LabF10
         public MainWindow()
         {
             InitializeComponent();
+            LoginBox.Text = "Login";
         }
     }
 }
